@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Webmotors App</string>
+    <string name="veiculos">Veículos</string>
+    <string name="ano">Ano</string>
+    <string name="kilometragem">Kilometragem</string>
+    <string name="cor">Cor</string>
+    <string name="modelo">%1$s %2$s</string>
+    <string name="anofab_anomod">%1$s/%2$s</string>
+    <string name="km">%1$s km</string>
+    <string name="erro_ws_sem_conexao">Sem conexão</string>
+    <string name="title_activity_detalhes_veiculo">DetalhesVeiculoActivity</string>
+    <string name="lbl_ano">Ano:</string>
+    <string name="lbl_km">Km:</string>
+    <string name="lbl_cor">Cor:</string>
+    <string name="tentar_novamente">Tentar novamente</string>
+    <string name="favorito">Favorito</string>
+</resources>

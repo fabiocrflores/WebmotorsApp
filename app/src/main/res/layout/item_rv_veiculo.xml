@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imgFoto"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_gravity="bottom"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgFavorito"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_favorito_off"
+            app:layout_constraintEnd_toEndOf="@+id/imgFoto"
+            app:layout_constraintTop_toTopOf="@+id/imgFoto"
+            android:contentDescription="@string/favorito" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/imgFoto"
+            app:layout_constraintStart_toStartOf="@+id/imgFoto">
+
+            <TextView
+                android:id="@+id/txtPreco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/imgFoto"
+                app:layout_constraintEnd_toEndOf="@+id/imgFoto"
+                app:layout_constraintStart_toStartOf="@+id/imgFoto" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtModelo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgFoto" />
+
+        <TextView
+            android:id="@+id/txtVersao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintEnd_toEndOf="@+id/txtModelo"
+            app:layout_constraintStart_toStartOf="@+id/txtModelo"
+            app:layout_constraintTop_toBottomOf="@+id/txtModelo" />
+
+        <ImageView
+            android:id="@+id/imgAno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/ano"
+            android:src="@drawable/ic_calendario"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtVersao"
+            app:layout_constraintTop_toBottomOf="@+id/txtVersao" />
+
+        <TextView
+            android:id="@+id/txtAno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:textSize="12sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/imgAno"
+            app:layout_constraintStart_toEndOf="@+id/imgAno"
+            app:layout_constraintTop_toTopOf="@+id/imgAno" />
+
+        <ImageView
+            android:id="@+id/imgKm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/kilometragem"
+            android:src="@drawable/ic_kilometragem"
+            app:layout_constraintStart_toEndOf="@+id/txtAno"
+            app:layout_constraintTop_toBottomOf="@+id/txtVersao" />
+
+        <TextView
+            android:id="@+id/txtKm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:textSize="12sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/imgKm"
+            app:layout_constraintStart_toEndOf="@+id/imgKm"
+            app:layout_constraintTop_toTopOf="@+id/imgKm" />
+
+        <ImageView
+            android:id="@+id/imgCor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/cor"
+            android:src="@drawable/ic_cor"
+            app:layout_constraintStart_toEndOf="@+id/txtKm"
+            app:layout_constraintTop_toBottomOf="@+id/txtVersao" />
+
+        <TextView
+            android:id="@+id/txtCor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:textSize="12sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/imgCor"
+            app:layout_constraintEnd_toEndOf="@+id/txtModelo"
+            app:layout_constraintStart_toEndOf="@+id/imgCor"
+            app:layout_constraintTop_toTopOf="@+id/imgCor" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
